@@ -5,7 +5,7 @@
 const char* ssid = "mehran.3";
 const char* password = "hogabr98";
 String order="off";
-
+int ledPin=13;
 void setup() 
 {
   Serial.begin(115200);
@@ -29,8 +29,15 @@ void loop()
     {
     order = http.getString();
 Serial.println(order);
-
-
+if(order=="on"){
+pinMode(ledPin,OUTPUT);
+digitalWrite(ledPin,HIGH);
+}
+else if(order=="off")
+{
+  pinMode(ledPin,OUTPUT);
+digitalWrite(ledPin,LOW);
+}
     }
     http.end(); //Close connection
   }
