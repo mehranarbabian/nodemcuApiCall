@@ -2,8 +2,8 @@
 #include <ESP8266HTTPClient.h>
 
 
-const char* ssid = "mehran.3";
-const char* password = "hogabr98";
+const char* ssid = "your wifi ssid";
+const char* password = "your wifi password";
 String order="off";
 int ledPin=13;
 void setup() 
